@@ -9,7 +9,7 @@ import {
   Text,
   TouchableOpacity,
 } from "react-native";
-import { Picker } from '@react-native-picker/picker'; // Import Picker from the correct package
+import { Picker } from '@react-native-picker/picker'; 
 import HorizontalScroll from "../components/HorizontalScroll";
 import VerticalScroll from "../components/VerticalScroll";
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -41,8 +41,7 @@ const MainPage = () => {
   const [showAllHorizontal, setShowAllHorizontal] = useState(false);
   const [showAllVertical, setShowAllVertical] = useState(false);
   const [showFontPicker, setShowFontPicker] = useState(false);
-  const { font, changeFont } = useContext(FontContext); // Consume the context
-
+  const { font, changeFont } = useContext(FontContext);
   const handleSearch = (text) => {
     setSearch(text);
     const newData = data.filter(
@@ -147,13 +146,13 @@ const styles = StyleSheet.create({
     padding: 10,
     backgroundColor: "#fff",
     borderRadius: 20,
-    paddingRight: 40, // Leave space for the icon
+    paddingRight: 40, 
     width: 149,
   },
   searchIcon: {
     position: "absolute",
     right: 15,
-    top: 18, // Adjust as needed
+    top: 18,
   },
   searchContainer: {
     flexDirection: "row",
@@ -184,12 +183,12 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     marginLeft: 20,
-    marginTop: 10,
+    marginTop: 5,
   },
   viewButton: {
     width: 195,
     height: 40,
-    borderRadius: 20, // Adjust as needed
+    borderRadius: 20, 
     backgroundColor: "white",
     display: "flex",
     justifyContent: "center",

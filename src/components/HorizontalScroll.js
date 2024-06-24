@@ -18,16 +18,16 @@ const HorizontalScroll = ({ data, showAll, onToggleViewAll }) => {
 
   const handleScroll = (event) => {
     const scrollPosition = event.nativeEvent.contentOffset.x;
-    const cardWidth = 200; // Assuming each card is 200px wide
+    const cardWidth = 200; 
     const activeCardIndex = Math.round(scrollPosition / cardWidth);
     setActiveIndex(activeCardIndex);
   };
 
   useEffect(() => {
     Animated.timing(trackWidth, {
-      toValue: activeIndex === null ? 50 : 100, // Change to 100 if active, otherwise 50
-      duration: 300, // Duration of the animation
-      useNativeDriver: false, // `useNativeDriver` must be false for width animation
+      toValue: activeIndex === null ? 50 : 100, 
+      duration: 300, 
+      useNativeDriver: false,
     }).start();
   }, [activeIndex]);
 

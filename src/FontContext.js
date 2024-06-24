@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react';
 
-// Create a context for font management
 const FontContext = createContext();
 
 export const FontProvider = ({ children }) => {

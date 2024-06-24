@@ -9,10 +9,6 @@ const LandingPage = () => {
 
   const [fontsLoaded] = useFonts({
     'Strawford': require('../assets/Fonts/Strawford/Strawford-Black.ttf'),
-    // 'Scilla-Regular': require('../fonts/Scilla-Regular.otf'),
-    // 'Scilla-RegularItalic': require('../fonts/Scilla-RegularItalic.otf'),
-    // 'ScillaNarrow-Regular': require('../fonts/ScillaNarrow-Regular.otf'),
-    // 'ScillaNarrow-RegularItalic': require('../fonts/ScillaNarrow-RegularItalic.otf'),
   });
   useEffect(() => {
     if (fontsLoaded) {
@@ -20,25 +16,19 @@ const LandingPage = () => {
         navigation.navigate('MainPage');
       }, 2000); // 2 seconds
 
-      // Clear the timer if the component is unmounted
+   
       return () => clearTimeout(timer);
     }
   }, [fontsLoaded, navigation]);
 
   if (!fontsLoaded) {
-    return null; // Render nothing until fonts are loaded
+    return null; 
   }
 
   return (
     <View style={styles.container}>
       <Image source={Logo} style={styles.logo} />
-      {/* <Text style={styles.title}>Welcome to MyApp</Text>
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('MainPage')}
-      >
-        <Text style={styles.buttonText}>Get Started</Text>
-      </TouchableOpacity> */}
+     
       <View style={styles.profileContainer}>
       <View style={styles.rightSideContainer}>
 
